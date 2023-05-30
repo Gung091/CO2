@@ -17,11 +17,10 @@ file="https://raw.githubusercontent.com/cchuang2009/2022-1/main/Python_IM/2023-2
 
 df = pd.read_csv(file)
 
-num_cols=['ENGINESIZE', 'CYLINDERS','FUELCONSUMPTION_CITY','FUELCONSUMPTION_HWY',\
-          'FUELCONSUMPTION_COMB','FUELCONSUMPTION_COMB_MPG']
-cat_cols=['MAKE','VEHICLECLASS','TRANSMISSION','FUELTYPE']
-target=['CO2EMISSIONS']
-
+num_cols=['引擎尺寸', '汽缸','城市油耗','高速公路油耗',\
+          '綜合油耗','綜合油耗（加侖/英里）']
+cat_cols=['汽車品牌','汽車類型（如：休旅車等）','變速器','汽油']
+target=['二氧化碳排放量']
 
 model_cat = load_model('model_pkl')
 st.title('CO2 Emission of Vehicles')
